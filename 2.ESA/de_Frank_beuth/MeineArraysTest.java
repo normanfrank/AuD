@@ -6,11 +6,27 @@ package de_Frank_beuth;
  */
 
 public class MeineArraysTest {
-
+	
     public static void main (String[] args) {
-        int[] ar = {3, 5, 6, 9, 13, 18, 34, 46};
-        int result = MeineArrays.binarySearchRecursiv(ar, 13);
-        System.out.println("Anzahl der Durchgänge: "+ MeineArrays.getcallCount());
-        System.out.println("Gesuchter Wert: "+ result);
-    }
+    	int lArray1 = 0;
+    	int rArray1 = 999;
+		int[] ar1 = new int [rArray1 - lArray1 +1];
+    		for(int i = 0; i <= rArray1 - lArray1; i++)
+    			ar1[i] = lArray1 +i;
+        System.out.println("Ein Array mit den Zahlen 0 - 999");
+        System.out.println("Gesuchter Wert: " + MeineArrays.binarySearchRecursiv(ar1, 12));
+        System.out.println("Anzahl der Durchgänge: "+ MeineArrays.getcallCount());	
+        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+ //------------------------------------------------------------------------------------------------------------------       
+    	int lArray2 = 0;
+    	int rArray2 = 9999;
+		int[] ar2 = new int [rArray2 - lArray2 +1];
+    		for(int i = 0; i <= rArray2 - lArray2; i++)
+    			ar2[i] = lArray2 +i;
+        System.out.println("Ein Array mit den Zahlen 0 - 9999");
+        System.out.println("Gesuchter Wert: " + MeineArrays.binarySearchRecursiv(ar2, 12));
+        System.out.println("Anzahl der Durchgänge: "+ MeineArrays.getcallCount());	
+        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+	}
 }
